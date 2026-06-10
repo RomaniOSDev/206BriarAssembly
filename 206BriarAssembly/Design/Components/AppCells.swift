@@ -221,10 +221,23 @@ struct AppEmptyStateView: View {
     let icon: String
     let title: String
     let message: String
+    var imageName: String?
 
     var body: some View {
         VStack(spacing: 16) {
-            AppIconBadge(systemName: icon, size: 72, highlighted: true)
+            if let imageName {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: 220, maxHeight: 160)
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .strokeBorder(Color("AppPrimary").opacity(0.2), lineWidth: 1)
+                    )
+            } else {
+                AppIconBadge(systemName: icon, size: 72, highlighted: true)
+            }
             Text(title)
                 .font(.title3.weight(.bold))
                 .foregroundStyle(Color("AppTextPrimary"))

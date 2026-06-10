@@ -1,28 +1,22 @@
 import SwiftUI
 
 enum AppTab: Int, CaseIterable {
-    case home = 0
-    case convert = 1
-    case tools = 2
-    case stats = 3
-    case settings = 4
+    case workspace = 0
+    case library = 1
+    case settings = 2
 
     var title: String {
         switch self {
-        case .home: return "Home"
-        case .convert: return "Convert"
-        case .tools: return "Tools"
-        case .stats: return "Stats"
+        case .workspace: return "Workspace"
+        case .library: return "Library"
         case .settings: return "Settings"
         }
     }
 
     var icon: String {
         switch self {
-        case .home: return "house.fill"
-        case .convert: return "globe"
-        case .tools: return "wrench.and.screwdriver.fill"
-        case .stats: return "chart.bar.fill"
+        case .workspace: return "arrow.triangle.branch"
+        case .library: return "books.vertical.fill"
         case .settings: return "gearshape.fill"
         }
     }
@@ -32,7 +26,7 @@ struct CustomTabBar: View {
     @Binding var selection: AppTab
 
     var body: some View {
-        HStack(spacing: 6) {
+        HStack(spacing: 8) {
             ForEach(AppTab.allCases, id: \.rawValue) { tab in
                 tabButton(tab)
             }
@@ -73,9 +67,9 @@ struct CustomTabBar: View {
                 Image(systemName: tab.icon)
                     .font(.system(size: 18, weight: .semibold))
                 Text(tab.title)
-                    .font(.system(size: 10, weight: .semibold))
+                    .font(.caption.weight(.semibold))
                     .lineLimit(1)
-                    .minimumScaleFactor(0.6)
+                    .minimumScaleFactor(0.7)
             }
             .foregroundStyle(selection == tab ? Color("AppBackground") : Color("AppTextSecondary"))
             .frame(maxWidth: .infinity)

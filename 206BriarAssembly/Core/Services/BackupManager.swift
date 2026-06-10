@@ -6,16 +6,8 @@ enum BackupManager {
             version: AppBackup.currentVersion,
             exportDate: Date(),
             clipboardHistory: storage.clipboardHistory,
-            conversionHistory: storage.conversionHistory,
-            recentColors: storage.recentColors,
-            favoriteTimeZones: storage.favoriteTimeZones,
-            defaultFromZone: storage.defaultFromZone,
-            defaultToZone: storage.defaultToZone,
-            defaultFormat: storage.defaultFormat,
-            itemsCreated: storage.itemsCreated,
-            conversionsRun: storage.conversionsRun,
-            streakDays: storage.streakDays,
-            totalMinutesUsed: storage.totalMinutesUsed
+            savedPipelines: storage.savedPipelines,
+            activePipelineSteps: storage.activePipelineSteps
         )
     }
 
@@ -34,16 +26,7 @@ enum BackupManager {
 
     static func apply(_ backup: AppBackup, to storage: AppStorage) {
         storage.clipboardHistory = backup.clipboardHistory
-        storage.conversionHistory = backup.conversionHistory
-        storage.recentColors = backup.recentColors
-        storage.favoriteTimeZones = backup.favoriteTimeZones
-        storage.defaultFromZone = backup.defaultFromZone
-        storage.defaultToZone = backup.defaultToZone
-        storage.defaultFormat = backup.defaultFormat
-        storage.itemsCreated = backup.itemsCreated
-        storage.conversionsRun = backup.conversionsRun
-        storage.streakDays = backup.streakDays
-        storage.totalMinutesUsed = backup.totalMinutesUsed
-        storage.totalSessionsCompleted = backup.conversionsRun
+        storage.savedPipelines = backup.savedPipelines
+        storage.activePipelineSteps = backup.activePipelineSteps
     }
 }

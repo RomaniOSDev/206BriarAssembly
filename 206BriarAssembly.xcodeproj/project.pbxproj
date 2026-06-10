@@ -9,45 +9,20 @@
 /* Begin PBXBuildFile section */
 		301FC8E62FD2C32E0019443E /* AppLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8962FD2C32E0019443E /* AppLink.swift */; };
 		301FC8E72FD2C32E0019443E /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8982FD2C32E0019443E /* AppStorage.swift */; };
-		301FC8E82FD2C32E0019443E /* AchievementDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC89A2FD2C32E0019443E /* AchievementDefinition.swift */; };
 		301FC8E92FD2C32E0019443E /* AppBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC89B2FD2C32E0019443E /* AppBackup.swift */; };
 		301FC8EA2FD2C32E0019443E /* ClipboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC89C2FD2C32E0019443E /* ClipboardEntry.swift */; };
-		301FC8EB2FD2C32E0019443E /* ConversionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC89D2FD2C32E0019443E /* ConversionRecord.swift */; };
 		301FC8EC2FD2C32E0019443E /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC89F2FD2C32E0019443E /* NotificationNames.swift */; };
 		301FC8ED2FD2C32E0019443E /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8A12FD2C32E0019443E /* BackupManager.swift */; };
-		301FC8EE2FD2C32E0019443E /* DateStreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8A32FD2C32E0019443E /* DateStreakCalculator.swift */; };
 		301FC8EF2FD2C32E0019443E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8A42FD2C32E0019443E /* HapticManager.swift */; };
 		301FC8F02FD2C32E0019443E /* TextProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8A52FD2C32E0019443E /* TextProcessingService.swift */; };
-		301FC8F12FD2C32E0019443E /* AchievementBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8A82FD2C32E0019443E /* AchievementBannerView.swift */; };
 		301FC8F22FD2C32E0019443E /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8A92FD2C32E0019443E /* AppBackgroundView.swift */; };
 		301FC8F32FD2C32E0019443E /* AppCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8AA2FD2C32E0019443E /* AppCells.swift */; };
-		301FC8F42FD2C32E0019443E /* HomeWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8AB2FD2C32E0019443E /* HomeWidgets.swift */; };
 		301FC8F52FD2C32E0019443E /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8AC2FD2C32E0019443E /* ShareSheet.swift */; };
-		301FC8F62FD2C32E0019443E /* SuccessCheckmarkOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8AD2FD2C32E0019443E /* SuccessCheckmarkOverlay.swift */; };
-		301FC8F72FD2C32E0019443E /* TextToolEditorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8AE2FD2C32E0019443E /* TextToolEditorCard.swift */; };
 		301FC8F82FD2C32E0019443E /* AppVisualStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8B02FD2C32E0019443E /* AppVisualStyle.swift */; };
 		301FC8F92FD2C32E0019443E /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8B12FD2C32E0019443E /* PrimaryButtonStyle.swift */; };
 		301FC8FA2FD2C32E0019443E /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8B22FD2C32E0019443E /* ShakeEffect.swift */; };
-		301FC8FB2FD2C32E0019443E /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8B52FD2C32E0019443E /* AchievementsView.swift */; };
-		301FC8FC2FD2C32E0019443E /* CaseConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8B72FD2C32E0019443E /* CaseConverterView.swift */; };
-		301FC8FD2FD2C32E0019443E /* CaseConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8B82FD2C32E0019443E /* CaseConverterViewModel.swift */; };
-		301FC8FE2FD2C32E0019443E /* ClipboardManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8BA2FD2C32E0019443E /* ClipboardManagerView.swift */; };
-		301FC8FF2FD2C32E0019443E /* ClipboardManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8BB2FD2C32E0019443E /* ClipboardManagerViewModel.swift */; };
-		301FC9002FD2C32E0019443E /* ColorInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8BD2FD2C32E0019443E /* ColorInspectorView.swift */; };
-		301FC9012FD2C32E0019443E /* ColorInspectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8BE2FD2C32E0019443E /* ColorInspectorViewModel.swift */; };
-		301FC9022FD2C32E0019443E /* FindReplaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8C02FD2C32E0019443E /* FindReplaceView.swift */; };
-		301FC9032FD2C32E0019443E /* FindReplaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8C12FD2C32E0019443E /* FindReplaceViewModel.swift */; };
-		301FC9042FD2C32E0019443E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8C32FD2C32E0019443E /* HomeView.swift */; };
-		301FC9052FD2C32E0019443E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8C42FD2C32E0019443E /* HomeViewModel.swift */; };
 		301FC9062FD2C32E0019443E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8C62FD2C32E0019443E /* OnboardingView.swift */; };
 		301FC9072FD2C32E0019443E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8C82FD2C32E0019443E /* SettingsView.swift */; };
-		301FC9082FD2C32E0019443E /* TextFormatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8CA2FD2C32E0019443E /* TextFormatterView.swift */; };
-		301FC9092FD2C32E0019443E /* TextFormatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8CB2FD2C32E0019443E /* TextFormatterViewModel.swift */; };
-		301FC90A2FD2C32E0019443E /* TimeZoneConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8CD2FD2C32E0019443E /* TimeZoneConverterView.swift */; };
-		301FC90B2FD2C32E0019443E /* TimeZoneConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8CE2FD2C32E0019443E /* TimeZoneConverterViewModel.swift */; };
-		301FC90C2FD2C32E0019443E /* ToolsHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8D02FD2C32E0019443E /* ToolsHubView.swift */; };
-		301FC90D2FD2C32E0019443E /* WordCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8D22FD2C32E0019443E /* WordCounterView.swift */; };
-		301FC90E2FD2C32E0019443E /* WordCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8D32FD2C32E0019443E /* WordCounterViewModel.swift */; };
 		301FC90F2FD2C32E0019443E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8D62FD2C32E0019443E /* CustomTabBar.swift */; };
 		301FC9102FD2C32E0019443E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8D72FD2C32E0019443E /* MainTabView.swift */; };
 		301FC9112FD2C32E0019443E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC8DB2FD2C32E0019443E /* AppDelegate.swift */; };
@@ -58,6 +33,12 @@
 		301FC9162FD2C32E0019443E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301FC8DC2FD2C32E0019443E /* Assets.xcassets */; };
 		301FC9182FD2C32E0019443E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301FC8E02FD2C32E0019443E /* LaunchScreen.storyboard */; };
 		301FC9192FD2C32E0019443E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301FC8E22FD2C32E0019443E /* Main.storyboard */; };
+		301FC9202FD2C32E0019443E /* PipelineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91A2FD2C32E0019443E /* PipelineStep.swift */; };
+		301FC9212FD2C32E0019443E /* TextPipelineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91B2FD2C32E0019443E /* TextPipelineService.swift */; };
+		301FC9222FD2C32E0019443E /* WorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91C2FD2C32E0019443E /* WorkspaceView.swift */; };
+		301FC9232FD2C32E0019443E /* WorkspaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91D2FD2C32E0019443E /* WorkspaceViewModel.swift */; };
+		301FC9242FD2C32E0019443E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91E2FD2C32E0019443E /* LibraryView.swift */; };
+		301FC9252FD2C32E0019443E /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91F2FD2C32E0019443E /* LibraryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,45 +46,20 @@
 		301FC7052FD192790019443E /* 206BriarAssembly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 206BriarAssembly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301FC8962FD2C32E0019443E /* AppLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLink.swift; sourceTree = "<group>"; };
 		301FC8982FD2C32E0019443E /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
-		301FC89A2FD2C32E0019443E /* AchievementDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDefinition.swift; sourceTree = "<group>"; };
 		301FC89B2FD2C32E0019443E /* AppBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackup.swift; sourceTree = "<group>"; };
 		301FC89C2FD2C32E0019443E /* ClipboardEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardEntry.swift; sourceTree = "<group>"; };
-		301FC89D2FD2C32E0019443E /* ConversionRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRecord.swift; sourceTree = "<group>"; };
 		301FC89F2FD2C32E0019443E /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		301FC8A12FD2C32E0019443E /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
-		301FC8A32FD2C32E0019443E /* DateStreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStreakCalculator.swift; sourceTree = "<group>"; };
 		301FC8A42FD2C32E0019443E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		301FC8A52FD2C32E0019443E /* TextProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProcessingService.swift; sourceTree = "<group>"; };
-		301FC8A82FD2C32E0019443E /* AchievementBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementBannerView.swift; sourceTree = "<group>"; };
 		301FC8A92FD2C32E0019443E /* AppBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
 		301FC8AA2FD2C32E0019443E /* AppCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCells.swift; sourceTree = "<group>"; };
-		301FC8AB2FD2C32E0019443E /* HomeWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgets.swift; sourceTree = "<group>"; };
 		301FC8AC2FD2C32E0019443E /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
-		301FC8AD2FD2C32E0019443E /* SuccessCheckmarkOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessCheckmarkOverlay.swift; sourceTree = "<group>"; };
-		301FC8AE2FD2C32E0019443E /* TextToolEditorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToolEditorCard.swift; sourceTree = "<group>"; };
 		301FC8B02FD2C32E0019443E /* AppVisualStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVisualStyle.swift; sourceTree = "<group>"; };
 		301FC8B12FD2C32E0019443E /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		301FC8B22FD2C32E0019443E /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
-		301FC8B52FD2C32E0019443E /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
-		301FC8B72FD2C32E0019443E /* CaseConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseConverterView.swift; sourceTree = "<group>"; };
-		301FC8B82FD2C32E0019443E /* CaseConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseConverterViewModel.swift; sourceTree = "<group>"; };
-		301FC8BA2FD2C32E0019443E /* ClipboardManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManagerView.swift; sourceTree = "<group>"; };
-		301FC8BB2FD2C32E0019443E /* ClipboardManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManagerViewModel.swift; sourceTree = "<group>"; };
-		301FC8BD2FD2C32E0019443E /* ColorInspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInspectorView.swift; sourceTree = "<group>"; };
-		301FC8BE2FD2C32E0019443E /* ColorInspectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInspectorViewModel.swift; sourceTree = "<group>"; };
-		301FC8C02FD2C32E0019443E /* FindReplaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindReplaceView.swift; sourceTree = "<group>"; };
-		301FC8C12FD2C32E0019443E /* FindReplaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindReplaceViewModel.swift; sourceTree = "<group>"; };
-		301FC8C32FD2C32E0019443E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		301FC8C42FD2C32E0019443E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		301FC8C62FD2C32E0019443E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		301FC8C82FD2C32E0019443E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		301FC8CA2FD2C32E0019443E /* TextFormatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatterView.swift; sourceTree = "<group>"; };
-		301FC8CB2FD2C32E0019443E /* TextFormatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatterViewModel.swift; sourceTree = "<group>"; };
-		301FC8CD2FD2C32E0019443E /* TimeZoneConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneConverterView.swift; sourceTree = "<group>"; };
-		301FC8CE2FD2C32E0019443E /* TimeZoneConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneConverterViewModel.swift; sourceTree = "<group>"; };
-		301FC8D02FD2C32E0019443E /* ToolsHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsHubView.swift; sourceTree = "<group>"; };
-		301FC8D22FD2C32E0019443E /* WordCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCounterView.swift; sourceTree = "<group>"; };
-		301FC8D32FD2C32E0019443E /* WordCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCounterViewModel.swift; sourceTree = "<group>"; };
 		301FC8D62FD2C32E0019443E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		301FC8D72FD2C32E0019443E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		301FC8D92FD2C32E0019443E /* privacy_policy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = privacy_policy.md; sourceTree = "<group>"; };
@@ -115,6 +71,12 @@
 		301FC8E12FD2C32E0019443E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301FC8E32FD2C32E0019443E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		301FC8E42FD2C32E0019443E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		301FC91A2FD2C32E0019443E /* PipelineStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineStep.swift; sourceTree = "<group>"; };
+		301FC91B2FD2C32E0019443E /* TextPipelineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPipelineService.swift; sourceTree = "<group>"; };
+		301FC91C2FD2C32E0019443E /* WorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceView.swift; sourceTree = "<group>"; };
+		301FC91D2FD2C32E0019443E /* WorkspaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceViewModel.swift; sourceTree = "<group>"; };
+		301FC91E2FD2C32E0019443E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		301FC91F2FD2C32E0019443E /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		A26D181CD6EA63A851DF0BB7 /* Pods-206BriarAssembly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-206BriarAssembly.debug.xcconfig"; path = "Target Support Files/Pods-206BriarAssembly/Pods-206BriarAssembly.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D8E84536DF85481CCBC39D /* Pods_206BriarAssembly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_206BriarAssembly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,10 +129,9 @@
 		301FC89E2FD2C32E0019443E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				301FC89A2FD2C32E0019443E /* AchievementDefinition.swift */,
 				301FC89B2FD2C32E0019443E /* AppBackup.swift */,
 				301FC89C2FD2C32E0019443E /* ClipboardEntry.swift */,
-				301FC89D2FD2C32E0019443E /* ConversionRecord.swift */,
+				301FC91A2FD2C32E0019443E /* PipelineStep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,9 +155,9 @@
 		301FC8A62FD2C32E0019443E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				301FC8A32FD2C32E0019443E /* DateStreakCalculator.swift */,
 				301FC8A42FD2C32E0019443E /* HapticManager.swift */,
 				301FC8A52FD2C32E0019443E /* TextProcessingService.swift */,
+				301FC91B2FD2C32E0019443E /* TextPipelineService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -217,13 +178,9 @@
 		301FC8AF2FD2C32E0019443E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				301FC8A82FD2C32E0019443E /* AchievementBannerView.swift */,
 				301FC8A92FD2C32E0019443E /* AppBackgroundView.swift */,
 				301FC8AA2FD2C32E0019443E /* AppCells.swift */,
-				301FC8AB2FD2C32E0019443E /* HomeWidgets.swift */,
 				301FC8AC2FD2C32E0019443E /* ShareSheet.swift */,
-				301FC8AD2FD2C32E0019443E /* SuccessCheckmarkOverlay.swift */,
-				301FC8AE2FD2C32E0019443E /* TextToolEditorCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -247,59 +204,6 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
-		301FC8B62FD2C32E0019443E /* Achievements */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8B52FD2C32E0019443E /* AchievementsView.swift */,
-			);
-			path = Achievements;
-			sourceTree = "<group>";
-		};
-		301FC8B92FD2C32E0019443E /* CaseConverter */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8B72FD2C32E0019443E /* CaseConverterView.swift */,
-				301FC8B82FD2C32E0019443E /* CaseConverterViewModel.swift */,
-			);
-			path = CaseConverter;
-			sourceTree = "<group>";
-		};
-		301FC8BC2FD2C32E0019443E /* Clipboard */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8BA2FD2C32E0019443E /* ClipboardManagerView.swift */,
-				301FC8BB2FD2C32E0019443E /* ClipboardManagerViewModel.swift */,
-			);
-			path = Clipboard;
-			sourceTree = "<group>";
-		};
-		301FC8BF2FD2C32E0019443E /* ColorInspector */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8BD2FD2C32E0019443E /* ColorInspectorView.swift */,
-				301FC8BE2FD2C32E0019443E /* ColorInspectorViewModel.swift */,
-			);
-			path = ColorInspector;
-			sourceTree = "<group>";
-		};
-		301FC8C22FD2C32E0019443E /* FindReplace */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8C02FD2C32E0019443E /* FindReplaceView.swift */,
-				301FC8C12FD2C32E0019443E /* FindReplaceViewModel.swift */,
-			);
-			path = FindReplace;
-			sourceTree = "<group>";
-		};
-		301FC8C52FD2C32E0019443E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8C32FD2C32E0019443E /* HomeView.swift */,
-				301FC8C42FD2C32E0019443E /* HomeViewModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		301FC8C72FD2C32E0019443E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,56 +220,13 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		301FC8CC2FD2C32E0019443E /* TextFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8CA2FD2C32E0019443E /* TextFormatterView.swift */,
-				301FC8CB2FD2C32E0019443E /* TextFormatterViewModel.swift */,
-			);
-			path = TextFormatter;
-			sourceTree = "<group>";
-		};
-		301FC8CF2FD2C32E0019443E /* TimeZoneConverter */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8CD2FD2C32E0019443E /* TimeZoneConverterView.swift */,
-				301FC8CE2FD2C32E0019443E /* TimeZoneConverterViewModel.swift */,
-			);
-			path = TimeZoneConverter;
-			sourceTree = "<group>";
-		};
-		301FC8D12FD2C32E0019443E /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8D02FD2C32E0019443E /* ToolsHubView.swift */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		301FC8D42FD2C32E0019443E /* WordCounter */ = {
-			isa = PBXGroup;
-			children = (
-				301FC8D22FD2C32E0019443E /* WordCounterView.swift */,
-				301FC8D32FD2C32E0019443E /* WordCounterViewModel.swift */,
-			);
-			path = WordCounter;
-			sourceTree = "<group>";
-		};
 		301FC8D52FD2C32E0019443E /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				301FC8B62FD2C32E0019443E /* Achievements */,
-				301FC8B92FD2C32E0019443E /* CaseConverter */,
-				301FC8BC2FD2C32E0019443E /* Clipboard */,
-				301FC8BF2FD2C32E0019443E /* ColorInspector */,
-				301FC8C22FD2C32E0019443E /* FindReplace */,
-				301FC8C52FD2C32E0019443E /* Home */,
+				301FC9262FD2C32E0019443E /* Library */,
 				301FC8C72FD2C32E0019443E /* Onboarding */,
 				301FC8C92FD2C32E0019443E /* Settings */,
-				301FC8CC2FD2C32E0019443E /* TextFormatter */,
-				301FC8CF2FD2C32E0019443E /* TimeZoneConverter */,
-				301FC8D12FD2C32E0019443E /* Tools */,
-				301FC8D42FD2C32E0019443E /* WordCounter */,
+				301FC9272FD2C32E0019443E /* Workspace */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -405,6 +266,24 @@
 				301FC8E42FD2C32E0019443E /* ViewController.swift */,
 			);
 			path = 206BriarAssembly;
+			sourceTree = "<group>";
+		};
+		301FC9262FD2C32E0019443E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				301FC91E2FD2C32E0019443E /* LibraryView.swift */,
+				301FC91F2FD2C32E0019443E /* LibraryViewModel.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		301FC9272FD2C32E0019443E /* Workspace */ = {
+			isa = PBXGroup;
+			children = (
+				301FC91C2FD2C32E0019443E /* WorkspaceView.swift */,
+				301FC91D2FD2C32E0019443E /* WorkspaceViewModel.swift */,
+			);
+			path = Workspace;
 			sourceTree = "<group>";
 		};
 		B52CA9AB78AC791A7A1EA0F9 /* Pods */ = {
@@ -524,45 +403,26 @@
 			files = (
 				301FC8E62FD2C32E0019443E /* AppLink.swift in Sources */,
 				301FC8E72FD2C32E0019443E /* AppStorage.swift in Sources */,
-				301FC8E82FD2C32E0019443E /* AchievementDefinition.swift in Sources */,
 				301FC8E92FD2C32E0019443E /* AppBackup.swift in Sources */,
 				301FC8EA2FD2C32E0019443E /* ClipboardEntry.swift in Sources */,
-				301FC8EB2FD2C32E0019443E /* ConversionRecord.swift in Sources */,
+				301FC9202FD2C32E0019443E /* PipelineStep.swift in Sources */,
 				301FC8EC2FD2C32E0019443E /* NotificationNames.swift in Sources */,
 				301FC8ED2FD2C32E0019443E /* BackupManager.swift in Sources */,
-				301FC8EE2FD2C32E0019443E /* DateStreakCalculator.swift in Sources */,
 				301FC8EF2FD2C32E0019443E /* HapticManager.swift in Sources */,
 				301FC8F02FD2C32E0019443E /* TextProcessingService.swift in Sources */,
-				301FC8F12FD2C32E0019443E /* AchievementBannerView.swift in Sources */,
+				301FC9212FD2C32E0019443E /* TextPipelineService.swift in Sources */,
 				301FC8F22FD2C32E0019443E /* AppBackgroundView.swift in Sources */,
 				301FC8F32FD2C32E0019443E /* AppCells.swift in Sources */,
-				301FC8F42FD2C32E0019443E /* HomeWidgets.swift in Sources */,
 				301FC8F52FD2C32E0019443E /* ShareSheet.swift in Sources */,
-				301FC8F62FD2C32E0019443E /* SuccessCheckmarkOverlay.swift in Sources */,
-				301FC8F72FD2C32E0019443E /* TextToolEditorCard.swift in Sources */,
 				301FC8F82FD2C32E0019443E /* AppVisualStyle.swift in Sources */,
 				301FC8F92FD2C32E0019443E /* PrimaryButtonStyle.swift in Sources */,
 				301FC8FA2FD2C32E0019443E /* ShakeEffect.swift in Sources */,
-				301FC8FB2FD2C32E0019443E /* AchievementsView.swift in Sources */,
-				301FC8FC2FD2C32E0019443E /* CaseConverterView.swift in Sources */,
-				301FC8FD2FD2C32E0019443E /* CaseConverterViewModel.swift in Sources */,
-				301FC8FE2FD2C32E0019443E /* ClipboardManagerView.swift in Sources */,
-				301FC8FF2FD2C32E0019443E /* ClipboardManagerViewModel.swift in Sources */,
-				301FC9002FD2C32E0019443E /* ColorInspectorView.swift in Sources */,
-				301FC9012FD2C32E0019443E /* ColorInspectorViewModel.swift in Sources */,
-				301FC9022FD2C32E0019443E /* FindReplaceView.swift in Sources */,
-				301FC9032FD2C32E0019443E /* FindReplaceViewModel.swift in Sources */,
-				301FC9042FD2C32E0019443E /* HomeView.swift in Sources */,
-				301FC9052FD2C32E0019443E /* HomeViewModel.swift in Sources */,
+				301FC9242FD2C32E0019443E /* LibraryView.swift in Sources */,
+				301FC9252FD2C32E0019443E /* LibraryViewModel.swift in Sources */,
 				301FC9062FD2C32E0019443E /* OnboardingView.swift in Sources */,
 				301FC9072FD2C32E0019443E /* SettingsView.swift in Sources */,
-				301FC9082FD2C32E0019443E /* TextFormatterView.swift in Sources */,
-				301FC9092FD2C32E0019443E /* TextFormatterViewModel.swift in Sources */,
-				301FC90A2FD2C32E0019443E /* TimeZoneConverterView.swift in Sources */,
-				301FC90B2FD2C32E0019443E /* TimeZoneConverterViewModel.swift in Sources */,
-				301FC90C2FD2C32E0019443E /* ToolsHubView.swift in Sources */,
-				301FC90D2FD2C32E0019443E /* WordCounterView.swift in Sources */,
-				301FC90E2FD2C32E0019443E /* WordCounterViewModel.swift in Sources */,
+				301FC9222FD2C32E0019443E /* WorkspaceView.swift in Sources */,
+				301FC9232FD2C32E0019443E /* WorkspaceViewModel.swift in Sources */,
 				301FC90F2FD2C32E0019443E /* CustomTabBar.swift in Sources */,
 				301FC9102FD2C32E0019443E /* MainTabView.swift in Sources */,
 				301FC9112FD2C32E0019443E /* AppDelegate.swift in Sources */,
@@ -601,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 206BriarAssembly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Briar Assembly";
@@ -642,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 206BriarAssembly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Briar Assembly";

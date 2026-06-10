@@ -20,11 +20,18 @@ struct SettingsView: View {
         NavigationStack {
             AppBackgroundView {
                 AppScreenScroll {
-                    AppCard(title: "Your Stats") {
+                    AppCard(title: "Library Overview") {
                         HStack(spacing: 10) {
-                            AppMetricTile(value: "\(storage.itemsCreated)", label: "Entries", icon: "doc.text")
-                            AppMetricTile(value: "\(storage.totalMinutesUsed)", label: "Minutes", icon: "clock")
-                            AppMetricTile(value: "\(storage.streakDays)", label: "Streak", icon: "flame")
+                            AppMetricTile(
+                                value: "\(storage.snippetCount)",
+                                label: "Snippets",
+                                icon: "books.vertical.fill"
+                            )
+                            AppMetricTile(
+                                value: "\(storage.savedPipelines.count)",
+                                label: "Presets",
+                                icon: "arrow.triangle.branch"
+                            )
                         }
                     }
 
@@ -46,7 +53,7 @@ struct SettingsView: View {
 
                     AppCard(title: "Data") {
                         VStack(spacing: 0) {
-                            actionButton(icon: "square.and.arrow.up.fill", title: "Export Backup", subtitle: "Save JSON to Files") {
+                            actionButton(icon: "square.and.arrow.up.fill", title: "Export Backup", subtitle: "Snippets and pipeline presets") {
                                 exportBackup()
                             }
                             rowDivider
@@ -61,7 +68,7 @@ struct SettingsView: View {
                                 AppActionRow(
                                     icon: "trash.fill",
                                     title: "Reset All Data",
-                                    subtitle: "Erase all local progress",
+                                    subtitle: "Erase snippets and presets",
                                     destructive: true,
                                     showChevron: false
                                 )
@@ -85,7 +92,7 @@ struct SettingsView: View {
                     HapticManager.warning()
                 }
             } message: {
-                Text("This will erase all saved snippets, history, and progress. This cannot be undone.")
+                Text("This will erase all snippets and pipeline presets. This cannot be undone.")
             }
             .fileImporter(isPresented: $showImporter, allowedContentTypes: [.json], allowsMultipleSelection: false) { result in
                 handleImport(result)
@@ -149,7 +156,7 @@ struct SettingsView: View {
         do {
             let data = try storage.exportBackupData()
             let url = FileManager.default.temporaryDirectory
-                .appendingPathComponent("calmnest-backup-\(Int(Date().timeIntervalSince1970)).json")
+                .appendingPathComponent("snippet-workspace-backup-\(Int(Date().timeIntervalSince1970)).json")
             try data.write(to: url)
             exportURL = url
             showShareSheet = true

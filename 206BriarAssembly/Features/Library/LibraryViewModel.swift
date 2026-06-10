@@ -21,7 +21,7 @@ enum ClipboardDateFilter: String, CaseIterable, Identifiable {
     }
 }
 
-final class ClipboardManagerViewModel: ObservableObject {
+final class LibraryViewModel: ObservableObject {
     @Published var editingEntry: ClipboardEntry?
     @Published var editText: String = ""
     @Published var editTag: String = "General"
@@ -74,7 +74,6 @@ final class ClipboardManagerViewModel: ObservableObject {
         let tag = newSnippetTag.trimmingCharacters(in: .whitespacesAndNewlines)
         let entry = ClipboardEntry(text: text, tag: tag.isEmpty ? "General" : tag)
         storage.addClipboardEntry(entry)
-        storage.recordClipboardSave()
         animateNewEntryID = entry.id
         HapticManager.lightTap()
         AudioServicesPlaySystemSound(1104)
@@ -106,6 +105,11 @@ final class ClipboardManagerViewModel: ObservableObject {
 
     func delete(id: UUID) {
         storage.deleteClipboardEntry(id: id)
+        HapticManager.lightTap()
+    }
+
+    func copyToClipboard(_ text: String) {
+        UIPasteboard.general.string = text
         HapticManager.lightTap()
     }
 
