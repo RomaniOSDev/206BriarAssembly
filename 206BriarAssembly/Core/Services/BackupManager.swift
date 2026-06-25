@@ -7,7 +7,8 @@ enum BackupManager {
             exportDate: Date(),
             clipboardHistory: storage.clipboardHistory,
             savedPipelines: storage.savedPipelines,
-            activePipelineSteps: storage.activePipelineSteps
+            activePipelineSteps: storage.activePipelineSteps,
+            regexStepConfig: storage.regexStepConfig
         )
     }
 
@@ -28,5 +29,8 @@ enum BackupManager {
         storage.clipboardHistory = backup.clipboardHistory
         storage.savedPipelines = backup.savedPipelines
         storage.activePipelineSteps = backup.activePipelineSteps
+        if let regexStepConfig = backup.regexStepConfig {
+            storage.regexStepConfig = regexStepConfig
+        }
     }
 }

@@ -1,12 +1,10 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @EnvironmentObject private var storage: AppStorage
-    @StateObject private var viewModel: LibraryViewModel
-
-    init(storage: AppStorage) {
-        _viewModel = StateObject(wrappedValue: LibraryViewModel(storage: storage))
-    }
+    @ObservedObject var viewModel: LibraryViewModel
+    var isSidebar: Bool = false
+    var onRunPipeline: ((ClipboardEntry) -> Void)?
+    var onSendToWorkspace: ((ClipboardEntry) -> Void)?
 
     var body: some View {
         NavigationStack {
@@ -14,10 +12,12 @@ struct LibraryView: View {
                 VStack(spacing: 0) {
                     filtersBar
                     contentList
-                    saveBar
+                    if !isSidebar {
+                        saveBar
+                    }
                 }
             }
-            .navigationTitle("Library")
+            .navigationTitle(isSidebar ? "Snippets" : "Library")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .sheet(item: $viewModel.editingEntry) { _ in
@@ -30,10 +30,10 @@ struct LibraryView: View {
     private var contentList: some View {
         if viewModel.isEmptyStorage {
             AppEmptyStateView(
-                icon: "books.vertical.fill",
-                title: "No Snippets Yet",
-                message: "Run a pipeline in Workspace or save text from your clipboard.",
-                imageName: "LibraryEmpty"
+                icon: "terminal.fill",
+                title: "No Log Snippets",
+                message: "Paste a log in Pipeline or save text from your clipboard.",
+                imageName: isSidebar ? nil : "LibraryEmpty"
             )
             .frame(maxHeight: .infinity)
         } else if viewModel.entries.isEmpty {
@@ -47,21 +47,46 @@ struct LibraryView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack(spacing: 12) {
                     ForEach(viewModel.entries) { entry in
-                        AppSnippetCell(tag: entry.tag, date: entry.savedAt, preview: entry.text)
-                            .scaleEffect(viewModel.animateNewEntryID == entry.id ? 1.02 : 1)
-                            .animation(.easeOut(duration: 0.2), value: viewModel.animateNewEntryID)
-                            .onTapGesture {
-                                viewModel.copyToClipboard(entry.text)
-                            }
-                            .contextMenu {
-                                Button("Copy") { viewModel.copyToClipboard(entry.text) }
-                                Button("Edit") { viewModel.beginEdit(entry) }
-                                Button("Delete", role: .destructive) { viewModel.delete(id: entry.id) }
-                            }
+                        snippetRow(entry)
                     }
                 }
-                .padding(.horizontal, 16)
+                .padding(.horizontal, isSidebar ? 12 : 16)
                 .padding(.bottom, 12)
+            }
+        }
+    }
+
+    private func snippetRow(_ entry: ClipboardEntry) -> some View {
+        VStack(spacing: 8) {
+            AppSnippetCell(tag: entry.tag, date: entry.savedAt, preview: entry.text)
+                .scaleEffect(viewModel.animateNewEntryID == entry.id ? 1.02 : 1)
+                .animation(.easeOut(duration: 0.2), value: viewModel.animateNewEntryID)
+                .onTapGesture {
+                    onSendToWorkspace?(entry)
+                }
+                .contextMenu {
+                    if let onRunPipeline {
+                        Button("Run Pipeline") { onRunPipeline(entry) }
+                    }
+                    if let onSendToWorkspace {
+                        Button("Open in Pipeline") { onSendToWorkspace(entry) }
+                    }
+                    Button("Copy") { viewModel.copyToClipboard(entry.text) }
+                    Button("Edit") { viewModel.beginEdit(entry) }
+                    Button("Delete", role: .destructive) { viewModel.delete(id: entry.id) }
+                }
+
+            if onRunPipeline != nil || onSendToWorkspace != nil {
+                HStack(spacing: 10) {
+                    if let onRunPipeline {
+                        Button("Run Pipeline") { onRunPipeline(entry) }
+                            .buttonStyle(PrimaryButtonStyle())
+                    }
+                    if let onSendToWorkspace {
+                        Button("Open in Pipeline") { onSendToWorkspace(entry) }
+                            .buttonStyle(SurfaceButtonStyle())
+                    }
+                }
             }
         }
     }
@@ -71,31 +96,46 @@ struct LibraryView: View {
             HStack(spacing: 10) {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Color("AppPrimary"))
-                AppStyledTextField(placeholder: "Search snippets", text: $viewModel.searchText)
+                AppStyledTextField(placeholder: "Search log snippets", text: $viewModel.searchText)
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, isSidebar ? 12 : 16)
             .padding(.top, 12)
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(viewModel.allTags, id: \.self) { tag in
-                        AppChip(title: tag, isSelected: viewModel.selectedTag == tag) {
-                            viewModel.selectedTag = tag
-                            HapticManager.lightTap()
+            if !isSidebar {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(viewModel.allTags, id: \.self) { tag in
+                            AppChip(title: tag, isSelected: viewModel.selectedTag == tag) {
+                                viewModel.selectedTag = tag
+                                HapticManager.lightTap()
+                            }
                         }
                     }
+                    .padding(.horizontal, 16)
                 }
-                .padding(.horizontal, 16)
-            }
 
-            Picker("Date", selection: $viewModel.dateFilter) {
-                ForEach(ClipboardDateFilter.allCases) { filter in
-                    Text(filter.title).tag(filter)
+                Picker("Date", selection: $viewModel.dateFilter) {
+                    ForEach(ClipboardDateFilter.allCases) { filter in
+                        Text(filter.title).tag(filter)
+                    }
                 }
+                .pickerStyle(.segmented)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 8)
+            } else {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(viewModel.allTags, id: \.self) { tag in
+                            AppChip(title: tag, isSelected: viewModel.selectedTag == tag) {
+                                viewModel.selectedTag = tag
+                                HapticManager.lightTap()
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                }
+                .padding(.bottom, 8)
             }
-            .pickerStyle(.segmented)
-            .padding(.horizontal, 16)
-            .padding(.bottom, 8)
         }
     }
 

@@ -2,25 +2,54 @@ import SwiftUI
 
 struct MainTabView: View {
     @EnvironmentObject private var storage: AppStorage
-    @State private var selectedTab: AppTab = .workspace
+    @EnvironmentObject private var workspaceViewModel: WorkspaceViewModel
+    @EnvironmentObject private var libraryViewModel: LibraryViewModel
+    @EnvironmentObject private var navigationState: AppNavigationState
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     var body: some View {
+        Group {
+            if horizontalSizeClass == .regular {
+                IPadRootView()
+            } else {
+                phoneLayout
+            }
+        }
+        .onChange(of: navigationState.selectedSnippetID) { snippetID in
+            guard let snippetID,
+                  let entry = storage.clipboardHistory.first(where: { $0.id == snippetID }) else { return }
+            workspaceViewModel.loadFromSnippet(entry)
+            navigationState.selectedSnippetID = nil
+        }
+    }
+
+    private var phoneLayout: some View {
         AppBackgroundView {
             VStack(spacing: 0) {
                 tabContent
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                CustomTabBar(selection: $selectedTab)
+                CustomTabBar(selection: $navigationState.selectedTab)
             }
         }
     }
 
     @ViewBuilder
     private var tabContent: some View {
-        switch selectedTab {
+        switch navigationState.selectedTab {
         case .workspace:
-            WorkspaceView(storage: storage)
+            WorkspaceView(viewModel: workspaceViewModel)
         case .library:
-            LibraryView(storage: storage)
+            LibraryView(
+                viewModel: libraryViewModel,
+                onRunPipeline: { entry in
+                    workspaceViewModel.runPipelineOnSnippet(entry)
+                    navigationState.selectedTab = .workspace
+                },
+                onSendToWorkspace: { entry in
+                    workspaceViewModel.loadFromSnippet(entry)
+                    navigationState.selectedTab = .workspace
+                }
+            )
         case .settings:
             SettingsView()
         }

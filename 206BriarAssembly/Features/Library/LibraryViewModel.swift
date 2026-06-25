@@ -24,13 +24,13 @@ enum ClipboardDateFilter: String, CaseIterable, Identifiable {
 final class LibraryViewModel: ObservableObject {
     @Published var editingEntry: ClipboardEntry?
     @Published var editText: String = ""
-    @Published var editTag: String = "General"
+    @Published var editTag: String = "Logs"
     @Published var animateNewEntryID: UUID?
     @Published var saveError: String?
     @Published var searchText: String = ""
     @Published var selectedTag: String = "All"
     @Published var dateFilter: ClipboardDateFilter = .all
-    @Published var newSnippetTag: String = "General"
+    @Published var newSnippetTag: String = "Logs"
 
     private let storage: AppStorage
     private var cancellables = Set<AnyCancellable>()

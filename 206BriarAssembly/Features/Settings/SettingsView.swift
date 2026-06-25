@@ -20,12 +20,12 @@ struct SettingsView: View {
         NavigationStack {
             AppBackgroundView {
                 AppScreenScroll {
-                    AppCard(title: "Library Overview") {
+                    AppCard(title: "Snippet Overview") {
                         HStack(spacing: 10) {
                             AppMetricTile(
                                 value: "\(storage.snippetCount)",
-                                label: "Snippets",
-                                icon: "books.vertical.fill"
+                                label: "Log Snippets",
+                                icon: "terminal.fill"
                             )
                             AppMetricTile(
                                 value: "\(storage.savedPipelines.count)",

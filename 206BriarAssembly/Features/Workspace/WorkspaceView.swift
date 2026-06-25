@@ -1,14 +1,9 @@
 import SwiftUI
 
 struct WorkspaceView: View {
-    @EnvironmentObject private var storage: AppStorage
-    @StateObject private var viewModel: WorkspaceViewModel
+    @ObservedObject var viewModel: WorkspaceViewModel
     @State private var presetName = ""
     @State private var showSavePresetAlert = false
-
-    init(storage: AppStorage) {
-        _viewModel = StateObject(wrappedValue: WorkspaceViewModel(storage: storage))
-    }
 
     private let stepColumns = [GridItem(.adaptive(minimum: 100), spacing: 8)]
 
@@ -18,7 +13,13 @@ struct WorkspaceView: View {
                 AppScreenScroll {
                     introCard
                     inputCard
+                    if viewModel.showsRegexConfig {
+                        regexConfigCard
+                    }
                     pipelineCard
+                    if !viewModel.livePreviews.isEmpty {
+                        livePreviewCard
+                    }
                     presetsCard
                     runSection
                     if !viewModel.outputText.isEmpty || viewModel.hasRunOnce {
@@ -26,7 +27,7 @@ struct WorkspaceView: View {
                     }
                 }
             }
-            .navigationTitle("Workspace")
+            .navigationTitle("Pipeline")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .sheet(isPresented: $viewModel.showSaveSheet) {
@@ -49,10 +50,10 @@ struct WorkspaceView: View {
         AppCard(accent: true) {
             HStack(alignment: .center, spacing: 16) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Text Pipeline")
+                    Text("Dev Log Pipeline")
                         .font(.title3.bold())
                         .foregroundStyle(Color("AppTextPrimary"))
-                    Text("Paste text, chain transforms, then save the result to your snippet library.")
+                    Text("Clean pasted logs, API output, and stack traces with chained transforms.")
                         .font(.subheadline)
                         .foregroundStyle(Color("AppTextSecondary"))
                 }
@@ -70,7 +71,7 @@ struct WorkspaceView: View {
     }
 
     private var inputCard: some View {
-        AppCard(title: "Source Text") {
+        AppCard(title: "Source Text", trailing: viewModel.loadedSnippetTitle) {
             VStack(spacing: 12) {
                 Button("Paste from Clipboard") {
                     viewModel.pasteFromClipboard()
@@ -85,11 +86,24 @@ struct WorkspaceView: View {
         }
     }
 
+    private var regexConfigCard: some View {
+        AppCard(title: "Regex Replace", trailing: viewModel.regexUseRegex ? "Regex" : "Plain") {
+            VStack(spacing: 12) {
+                AppStyledTextField(placeholder: "Find pattern", text: $viewModel.regexPattern)
+                AppStyledTextField(placeholder: "Replacement", text: $viewModel.regexReplacement)
+                Toggle("Use regular expression", isOn: $viewModel.regexUseRegex)
+                    .font(.subheadline)
+                    .foregroundStyle(Color("AppTextPrimary"))
+                    .tint(Color("AppPrimary"))
+            }
+        }
+    }
+
     private var pipelineCard: some View {
         AppCard(title: "Pipeline Steps", trailing: "\(viewModel.selectedSteps.count) steps") {
             VStack(alignment: .leading, spacing: 14) {
                 if viewModel.selectedSteps.isEmpty {
-                    Text("Tap steps below to build your pipeline.")
+                    Text("Tap steps below to build your cleaning pipeline.")
                         .font(.caption)
                         .foregroundStyle(Color("AppTextSecondary"))
                 } else {
@@ -161,6 +175,35 @@ struct WorkspaceView: View {
                 .buttonStyle(SurfaceButtonStyle())
                 .disabled(viewModel.selectedSteps.isEmpty)
                 .opacity(viewModel.selectedSteps.isEmpty ? 0.5 : 1)
+            }
+        }
+    }
+
+    private var livePreviewCard: some View {
+        AppCard(title: "Live Step Preview", trailing: "Auto") {
+            VStack(spacing: 10) {
+                ForEach(viewModel.livePreviews) { preview in
+                    VStack(alignment: .leading, spacing: 6) {
+                        HStack(spacing: 8) {
+                            Text("After \(preview.id + 1)")
+                                .font(.caption2.weight(.bold))
+                                .foregroundStyle(Color("AppPrimary"))
+                            Image(systemName: preview.step.icon)
+                                .font(.caption2)
+                                .foregroundStyle(Color("AppPrimary"))
+                            Text(preview.step.title)
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(Color("AppTextPrimary"))
+                        }
+                        Text(preview.previewSnippet.isEmpty ? "(empty)" : preview.previewSnippet)
+                            .font(.caption)
+                            .foregroundStyle(Color("AppTextSecondary"))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .lineLimit(3)
+                    }
+                    .padding(10)
+                    .appInsetSurface(cornerRadius: 10)
+                }
             }
         }
     }

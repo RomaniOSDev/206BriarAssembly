@@ -39,6 +39,9 @@
 		301FC9232FD2C32E0019443E /* WorkspaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91D2FD2C32E0019443E /* WorkspaceViewModel.swift */; };
 		301FC9242FD2C32E0019443E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91E2FD2C32E0019443E /* LibraryView.swift */; };
 		301FC9252FD2C32E0019443E /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC91F2FD2C32E0019443E /* LibraryViewModel.swift */; };
+		301FC9282FD2C32E0019443E /* RegexStepConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC9272FD2C32E0019443E /* RegexStepConfig.swift */; };
+		301FC92A2FD2C32E0019443E /* AppNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC9292FD2C32E0019443E /* AppNavigationState.swift */; };
+		301FC92C2FD2C32E0019443E /* IPadRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC92B2FD2C32E0019443E /* IPadRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		301FC91D2FD2C32E0019443E /* WorkspaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceViewModel.swift; sourceTree = "<group>"; };
 		301FC91E2FD2C32E0019443E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		301FC91F2FD2C32E0019443E /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		301FC9272FD2C32E0019443E /* RegexStepConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexStepConfig.swift; sourceTree = "<group>"; };
+		301FC9292FD2C32E0019443E /* AppNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationState.swift; sourceTree = "<group>"; };
+		301FC92B2FD2C32E0019443E /* IPadRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadRootView.swift; sourceTree = "<group>"; };
 		A26D181CD6EA63A851DF0BB7 /* Pods-206BriarAssembly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-206BriarAssembly.debug.xcconfig"; path = "Target Support Files/Pods-206BriarAssembly/Pods-206BriarAssembly.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D8E84536DF85481CCBC39D /* Pods_206BriarAssembly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_206BriarAssembly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +138,7 @@
 				301FC89B2FD2C32E0019443E /* AppBackup.swift */,
 				301FC89C2FD2C32E0019443E /* ClipboardEntry.swift */,
 				301FC91A2FD2C32E0019443E /* PipelineStep.swift */,
+				301FC9272FD2C32E0019443E /* RegexStepConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,7 +233,7 @@
 				301FC9262FD2C32E0019443E /* Library */,
 				301FC8C72FD2C32E0019443E /* Onboarding */,
 				301FC8C92FD2C32E0019443E /* Settings */,
-				301FC9272FD2C32E0019443E /* Workspace */,
+				301FC92D2FD2C32E0019443E /* Workspace */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -234,7 +241,9 @@
 		301FC8D82FD2C32E0019443E /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				301FC9292FD2C32E0019443E /* AppNavigationState.swift */,
 				301FC8D62FD2C32E0019443E /* CustomTabBar.swift */,
+				301FC92B2FD2C32E0019443E /* IPadRootView.swift */,
 				301FC8D72FD2C32E0019443E /* MainTabView.swift */,
 			);
 			path = Navigation;
@@ -277,7 +286,7 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		301FC9272FD2C32E0019443E /* Workspace */ = {
+		301FC92D2FD2C32E0019443E /* Workspace */ = {
 			isa = PBXGroup;
 			children = (
 				301FC91C2FD2C32E0019443E /* WorkspaceView.swift */,
@@ -406,6 +415,7 @@
 				301FC8E92FD2C32E0019443E /* AppBackup.swift in Sources */,
 				301FC8EA2FD2C32E0019443E /* ClipboardEntry.swift in Sources */,
 				301FC9202FD2C32E0019443E /* PipelineStep.swift in Sources */,
+				301FC9282FD2C32E0019443E /* RegexStepConfig.swift in Sources */,
 				301FC8EC2FD2C32E0019443E /* NotificationNames.swift in Sources */,
 				301FC8ED2FD2C32E0019443E /* BackupManager.swift in Sources */,
 				301FC8EF2FD2C32E0019443E /* HapticManager.swift in Sources */,
@@ -424,6 +434,8 @@
 				301FC9222FD2C32E0019443E /* WorkspaceView.swift in Sources */,
 				301FC9232FD2C32E0019443E /* WorkspaceViewModel.swift in Sources */,
 				301FC90F2FD2C32E0019443E /* CustomTabBar.swift in Sources */,
+				301FC92A2FD2C32E0019443E /* AppNavigationState.swift in Sources */,
+				301FC92C2FD2C32E0019443E /* IPadRootView.swift in Sources */,
 				301FC9102FD2C32E0019443E /* MainTabView.swift in Sources */,
 				301FC9112FD2C32E0019443E /* AppDelegate.swift in Sources */,
 				301FC9122FD2C32E0019443E /* ContentView.swift in Sources */,
@@ -461,12 +473,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 206BriarAssembly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Briar Assembly";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -478,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.br16r8ss4mbl9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -491,7 +503,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -502,12 +514,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 206BriarAssembly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Briar Assembly";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -519,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.br16r8ss4mbl9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -532,7 +544,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

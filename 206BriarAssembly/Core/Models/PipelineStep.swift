@@ -12,6 +12,7 @@ enum PipelineStep: String, Codable, CaseIterable, Identifiable {
     case camelCase
     case kebabCase
     case titleCase
+    case regexReplace
 
     var id: String { rawValue }
 
@@ -28,6 +29,7 @@ enum PipelineStep: String, Codable, CaseIterable, Identifiable {
         case .camelCase: return "camelCase"
         case .kebabCase: return "kebab-case"
         case .titleCase: return "Title Case"
+        case .regexReplace: return "Regex Replace"
         }
     }
 
@@ -44,7 +46,12 @@ enum PipelineStep: String, Codable, CaseIterable, Identifiable {
         case .camelCase: return "textformat"
         case .kebabCase: return "text.word.spacing"
         case .titleCase: return "textformat.size"
+        case .regexReplace: return "text.magnifyingglass"
         }
+    }
+
+    var requiresRegexConfig: Bool {
+        self == .regexReplace
     }
 }
 
@@ -52,27 +59,32 @@ struct SavedPipeline: Codable, Identifiable, Equatable {
     let id: UUID
     var name: String
     var steps: [PipelineStep]
+    var regexConfig: RegexStepConfig?
 
-    init(id: UUID = UUID(), name: String, steps: [PipelineStep]) {
+    init(id: UUID = UUID(), name: String, steps: [PipelineStep], regexConfig: RegexStepConfig? = nil) {
         self.id = id
         self.name = name
         self.steps = steps
+        self.regexConfig = regexConfig
     }
 }
 
 enum PipelinePreset {
-    static let cleanNotes: SavedPipeline = SavedPipeline(
-        name: "Clean Notes",
-        steps: [.trim, .collapseSpaces, .dedupeLines]
+    static let logCleaner: SavedPipeline = SavedPipeline(
+        name: "Log Cleaner",
+        steps: [.trim, .dedupeLines, .collapseSpaces]
     )
-    static let codeReady: SavedPipeline = SavedPipeline(
-        name: "Code Ready",
+    static let stripTimestamps: SavedPipeline = SavedPipeline(
+        name: "Strip Timestamps",
+        steps: [.regexReplace, .trim, .dedupeLines],
+        regexConfig: .stripLogPrefix
+    )
+    static let apiKeysFormat: SavedPipeline = SavedPipeline(
+        name: "API Keys Format",
         steps: [.trim, .dedupeLines, .snakeCase]
     )
-    static let listFormat: SavedPipeline = SavedPipeline(
-        name: "List Format",
-        steps: [.trim, .sortLines, .numberLines]
-    )
 
-    static let all: [SavedPipeline] = [cleanNotes, codeReady, listFormat]
+    static let all: [SavedPipeline] = [logCleaner, stripTimestamps, apiKeysFormat]
+
+    static let cleanNotes: SavedPipeline = logCleaner
 }

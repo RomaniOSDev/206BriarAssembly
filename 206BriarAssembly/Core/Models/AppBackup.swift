@@ -6,6 +6,7 @@ struct AppBackup: Codable {
     var clipboardHistory: [ClipboardEntry]
     var savedPipelines: [SavedPipeline]
     var activePipelineSteps: [PipelineStep]
+    var regexStepConfig: RegexStepConfig?
 
-    static let currentVersion = 2
+    static let currentVersion = 3
 }

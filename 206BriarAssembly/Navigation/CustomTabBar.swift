@@ -7,8 +7,8 @@ enum AppTab: Int, CaseIterable {
 
     var title: String {
         switch self {
-        case .workspace: return "Workspace"
-        case .library: return "Library"
+        case .workspace: return "Pipeline"
+        case .library: return "Snippets"
         case .settings: return "Settings"
         }
     }
@@ -16,7 +16,7 @@ enum AppTab: Int, CaseIterable {
     var icon: String {
         switch self {
         case .workspace: return "arrow.triangle.branch"
-        case .library: return "books.vertical.fill"
+        case .library: return "terminal.fill"
         case .settings: return "gearshape.fill"
         }
     }

@@ -6,18 +6,18 @@ struct OnboardingView: View {
 
     private let pages: [(headline: String, description: String, imageName: String)] = [
         (
-            "Build Pipelines",
-            "Chain multiple text transforms and run them in one tap.",
+            "Clean Dev Logs",
+            "Paste stack traces or API output, then chain transforms like trim, dedupe, and regex.",
             "OnboardingPipeline"
         ),
         (
-            "Capture Snippets",
-            "Save cleaned text to your library with tags and search.",
+            "Save Log Snippets",
+            "Store cleaned output with tags and run pipelines on saved snippets anytime.",
             "OnboardingLibrary"
         ),
         (
             "Reuse Presets",
-            "Load saved pipelines like Clean Notes or Code Ready anytime.",
+            "Load presets like Log Cleaner or Strip Timestamps for repeated workflows.",
             "OnboardingPresets"
         )
     ]

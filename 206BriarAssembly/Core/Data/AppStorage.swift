@@ -8,6 +8,7 @@ final class AppStorage: ObservableObject {
         static let lastSavedDate = "lastSavedDate"
         static let savedPipelines = "savedPipelines"
         static let activePipelineSteps = "activePipelineSteps"
+        static let regexStepConfig = "regexStepConfig"
     }
 
     private let defaults: UserDefaults
@@ -39,6 +40,10 @@ final class AppStorage: ObservableObject {
         didSet { saveActivePipelineSteps() }
     }
 
+    @Published var regexStepConfig: RegexStepConfig {
+        didSet { saveRegexStepConfig() }
+    }
+
     var snippetCount: Int { clipboardHistory.count }
 
     var clipboardTags: [String] {
@@ -55,6 +60,7 @@ final class AppStorage: ObservableObject {
         lastSavedDate = defaults.object(forKey: Keys.lastSavedDate) as? Date
         savedPipelines = Self.loadJSON([SavedPipeline].self, key: Keys.savedPipelines, defaults: defaults) ?? []
         activePipelineSteps = Self.loadPipelineSteps(from: defaults)
+        regexStepConfig = Self.loadJSON(RegexStepConfig.self, key: Keys.regexStepConfig, defaults: defaults) ?? .empty
 
         if savedPipelines.isEmpty {
             savedPipelines = PipelinePreset.all
@@ -117,7 +123,8 @@ final class AppStorage: ObservableObject {
             Keys.clipboardHistory,
             Keys.lastSavedDate,
             Keys.savedPipelines,
-            Keys.activePipelineSteps
+            Keys.activePipelineSteps,
+            Keys.regexStepConfig
         ]
         keys.forEach { defaults.removeObject(forKey: $0) }
         defaults.synchronize()
@@ -132,6 +139,7 @@ final class AppStorage: ObservableObject {
         lastSavedDate = defaults.object(forKey: Keys.lastSavedDate) as? Date
         savedPipelines = Self.loadJSON([SavedPipeline].self, key: Keys.savedPipelines, defaults: defaults) ?? PipelinePreset.all
         activePipelineSteps = Self.loadPipelineSteps(from: defaults)
+        regexStepConfig = Self.loadJSON(RegexStepConfig.self, key: Keys.regexStepConfig, defaults: defaults) ?? .empty
     }
 
     private func saveClipboardHistory() {
@@ -151,9 +159,15 @@ final class AppStorage: ObservableObject {
         defaults.set(raw, forKey: Keys.activePipelineSteps)
     }
 
+    private func saveRegexStepConfig() {
+        if let data = try? encoder.encode(regexStepConfig) {
+            defaults.set(data, forKey: Keys.regexStepConfig)
+        }
+    }
+
     private static func loadPipelineSteps(from defaults: UserDefaults) -> [PipelineStep] {
         guard let raw = defaults.stringArray(forKey: Keys.activePipelineSteps) else {
-            return PipelinePreset.cleanNotes.steps
+            return PipelinePreset.logCleaner.steps
         }
         return raw.compactMap(PipelineStep.init(rawValue:))
     }
