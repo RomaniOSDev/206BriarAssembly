@@ -42,6 +42,17 @@
 		301FC9282FD2C32E0019443E /* RegexStepConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC9272FD2C32E0019443E /* RegexStepConfig.swift */; };
 		301FC92A2FD2C32E0019443E /* AppNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC9292FD2C32E0019443E /* AppNavigationState.swift */; };
 		301FC92C2FD2C32E0019443E /* IPadRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FC92B2FD2C32E0019443E /* IPadRootView.swift */; };
+		A06B000000000000301FC931 /* CalendarGateEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC930 /* CalendarGateEvaluator.swift */; };
+		A06B000000000000301FC933 /* DeferredLaunchCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC932 /* DeferredLaunchCanvas.swift */; };
+		A06B000000000000301FC935 /* LaunchDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC934 /* LaunchDestination.swift */; };
+		A06B000000000000301FC937 /* LaunchFlowResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC936 /* LaunchFlowResolver.swift */; };
+		A06B000000000000301FC939 /* LaunchFlowSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC938 /* LaunchFlowSecrets.swift */; };
+		A06B000000000000301FC93B /* LaunchSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC93A /* LaunchSessionStore.swift */; };
+		A06B000000000000301FC93D /* LaunchStagingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC93C /* LaunchStagingState.swift */; };
+		A06B000000000000301FC93F /* RemoteEntryProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC93E /* RemoteEntryProbe.swift */; };
+		A06B000000000000301FC941 /* RemoteEntryURLComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC940 /* RemoteEntryURLComposer.swift */; };
+		A06B000000000000301FC943 /* RootWindowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC942 /* RootWindowPresenter.swift */; };
+		A06B000000000000301FC945 /* WebDocumentSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F000000000000301FC944 /* WebDocumentSurfaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +94,17 @@
 		301FC9272FD2C32E0019443E /* RegexStepConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexStepConfig.swift; sourceTree = "<group>"; };
 		301FC9292FD2C32E0019443E /* AppNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationState.swift; sourceTree = "<group>"; };
 		301FC92B2FD2C32E0019443E /* IPadRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadRootView.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC930 /* CalendarGateEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGateEvaluator.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC932 /* DeferredLaunchCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredLaunchCanvas.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC934 /* LaunchDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDestination.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC936 /* LaunchFlowResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFlowResolver.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC938 /* LaunchFlowSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFlowSecrets.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC93A /* LaunchSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSessionStore.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC93C /* LaunchStagingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStagingState.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC93E /* RemoteEntryProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEntryProbe.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC940 /* RemoteEntryURLComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEntryURLComposer.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC942 /* RootWindowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindowPresenter.swift; sourceTree = "<group>"; };
+		A06F000000000000301FC944 /* WebDocumentSurfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDocumentSurfaceView.swift; sourceTree = "<group>"; };
 		A26D181CD6EA63A851DF0BB7 /* Pods-206BriarAssembly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-206BriarAssembly.debug.xcconfig"; path = "Target Support Files/Pods-206BriarAssembly/Pods-206BriarAssembly.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D8E84536DF85481CCBC39D /* Pods_206BriarAssembly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_206BriarAssembly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -264,6 +286,7 @@
 				301FC8B42FD2C32E0019443E /* Design */,
 				301FC8D52FD2C32E0019443E /* Features */,
 				301FC8D82FD2C32E0019443E /* Navigation */,
+				A06F00002FD2C32E0019443E /* LaunchFlow */,
 				301FC8DA2FD2C32E0019443E /* Resources */,
 				301FC8DB2FD2C32E0019443E /* AppDelegate.swift */,
 				301FC8DC2FD2C32E0019443E /* Assets.xcassets */,
@@ -293,6 +316,24 @@
 				301FC91D2FD2C32E0019443E /* WorkspaceViewModel.swift */,
 			);
 			path = Workspace;
+			sourceTree = "<group>";
+		};
+		A06F00002FD2C32E0019443E /* LaunchFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A06F000000000000301FC930 /* CalendarGateEvaluator.swift */,
+				A06F000000000000301FC932 /* DeferredLaunchCanvas.swift */,
+				A06F000000000000301FC934 /* LaunchDestination.swift */,
+				A06F000000000000301FC936 /* LaunchFlowResolver.swift */,
+				A06F000000000000301FC938 /* LaunchFlowSecrets.swift */,
+				A06F000000000000301FC93A /* LaunchSessionStore.swift */,
+				A06F000000000000301FC93C /* LaunchStagingState.swift */,
+				A06F000000000000301FC93E /* RemoteEntryProbe.swift */,
+				A06F000000000000301FC940 /* RemoteEntryURLComposer.swift */,
+				A06F000000000000301FC942 /* RootWindowPresenter.swift */,
+				A06F000000000000301FC944 /* WebDocumentSurfaceView.swift */,
+			);
+			path = LaunchFlow;
 			sourceTree = "<group>";
 		};
 		B52CA9AB78AC791A7A1EA0F9 /* Pods */ = {
@@ -437,6 +478,17 @@
 				301FC92A2FD2C32E0019443E /* AppNavigationState.swift in Sources */,
 				301FC92C2FD2C32E0019443E /* IPadRootView.swift in Sources */,
 				301FC9102FD2C32E0019443E /* MainTabView.swift in Sources */,
+				A06B000000000000301FC931 /* CalendarGateEvaluator.swift in Sources */,
+				A06B000000000000301FC933 /* DeferredLaunchCanvas.swift in Sources */,
+				A06B000000000000301FC935 /* LaunchDestination.swift in Sources */,
+				A06B000000000000301FC937 /* LaunchFlowResolver.swift in Sources */,
+				A06B000000000000301FC939 /* LaunchFlowSecrets.swift in Sources */,
+				A06B000000000000301FC93B /* LaunchSessionStore.swift in Sources */,
+				A06B000000000000301FC93D /* LaunchStagingState.swift in Sources */,
+				A06B000000000000301FC93F /* RemoteEntryProbe.swift in Sources */,
+				A06B000000000000301FC941 /* RemoteEntryURLComposer.swift in Sources */,
+				A06B000000000000301FC943 /* RootWindowPresenter.swift in Sources */,
+				A06B000000000000301FC945 /* WebDocumentSurfaceView.swift in Sources */,
 				301FC9112FD2C32E0019443E /* AppDelegate.swift in Sources */,
 				301FC9122FD2C32E0019443E /* ContentView.swift in Sources */,
 				301FC9132FD2C32E0019443E /* SceneDelegate.swift in Sources */,
@@ -490,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.br16r8ss4mbl9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -531,7 +583,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.br16r8ss4mbl9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
